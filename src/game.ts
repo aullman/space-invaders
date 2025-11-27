@@ -61,10 +61,11 @@ const LASER_WIDTH = 6;
 const BOMB_DROP_INTERVAL = 60; // frames between bomb drops
 const BOMB_SPEED = 3;
 
-// Sound effects
-const explosionSound = new Audio('/sounds/explosion.mp3');
-const shootSound = new Audio('/sounds/shoot.mp3');
-const powerUpSound = new Audio('/sounds/powerup.wav');
+// Sound effects - use base URL for GitHub Pages compatibility
+const baseUrl = import.meta.env.BASE_URL;
+const explosionSound = new Audio(`${baseUrl}sounds/explosion.mp3`);
+const shootSound = new Audio(`${baseUrl}sounds/shoot.mp3`);
+const powerUpSound = new Audio(`${baseUrl}sounds/powerup.wav`);
 shootSound.volume = 0.3; // Reduce volume a bit
 powerUpSound.volume = 0.5;
 
